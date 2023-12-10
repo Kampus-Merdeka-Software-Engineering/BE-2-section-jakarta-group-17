@@ -1,4 +1,4 @@
-import { createProduct, readProducts } from "../services/products.js";
+import { createProduct, readProducts, readProductsById } from "../services/products.js";
 
 export const getProductsList = async (request, response) => {
   const productsList = await readProducts();
@@ -8,6 +8,28 @@ export const getProductsList = async (request, response) => {
   response.status(200).json({
     data: productsList,
     message: "sukses mengambil data",
+  });
+};
+
+/**
+ *
+ * @param {express.Request} request
+ * @param {express.Response} response
+ */
+
+export const postProductsId = async (request, response) => {
+  const id = request.params.id;
+
+  const product = await readProductsById(id);
+
+  if (product === null) {
+    return response.status(404).json({
+      message: "Data not Found",
+    });
+  }
+
+  response.json({
+    data: product,
   });
 };
 

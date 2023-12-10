@@ -1,5 +1,11 @@
 import { Products } from "../models/index.js";
 
+export const readProductsById = async (ProductsId) => {
+  return await Products.findOne({
+    where: { id: ProductsId },
+  });
+};
+
 export const readProducts = async () => {
   return await Products.findAll();
 };
