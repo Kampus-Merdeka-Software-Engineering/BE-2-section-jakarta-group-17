@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import "dotenv/config";
 import cors from "cors";
 import productRoutes from "./routes/productsRoutes.js";
 import { startSequelize } from "./utils/startSequelize.js";
