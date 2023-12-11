@@ -10,10 +10,11 @@ export const readArtikel = async () => {
   return await Artikel.findAll();
 };
 
-export const createArtikel = async (Judul, Deskripsi, Gambar, TglTerbit) => {
+export const createArtikel = async (Judul, Deskripsi, Isi, Gambar, TglTerbit) => {
   return await Artikel.create({
     Judul,
     Deskripsi,
+    Isi,
     Gambar,
     TglTerbit,
   });

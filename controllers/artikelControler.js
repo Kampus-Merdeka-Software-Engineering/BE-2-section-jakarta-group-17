@@ -40,9 +40,9 @@ export const postArtikelId = async (request, response) => {
  */
 
 export const postArtikelItem = async (request, response) => {
-  const { Judul, Deskripsi, Gambar, TglTerbit } = request.body;
+  const { Judul, Deskripsi, Isi, Gambar, TglTerbit } = request.body;
 
-  const artikel = await createArtikel(Judul, Deskripsi, Gambar, TglTerbit);
+  const artikel = await createArtikel(Judul, Deskripsi, Isi, Gambar, TglTerbit);
 
   response.json(artikel);
 };
