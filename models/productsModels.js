@@ -7,6 +7,8 @@ const Products = sequelize.define("Products", {
   title: DataTypes.STRING,
   price: DataTypes.INTEGER,
   AKG: DataTypes.INTEGER,
+  createdAt: DataTypes.DATE,
+  updatedAt: DataTypes.DATE,
 });
 
 export default Products;

@@ -7,6 +7,8 @@ const Artikel = sequelize.define("Artikel", {
   Deskripsi: DataTypes.STRING,
   Gambar: DataTypes.STRING,
   TglTerbit: DataTypes.DATE,
+  createdAt: DataTypes.DATE,
+  updatedAt: DataTypes.DATE,
 });
 
 export default Artikel;
