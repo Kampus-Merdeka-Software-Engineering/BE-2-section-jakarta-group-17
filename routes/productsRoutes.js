@@ -12,7 +12,7 @@ router.post("/create", postProductItem);
 
 router.get("/artikellist", getArtikelList);
 
-router.get("/artikel/:id", postArtikelId);
+router.get("/:id", postArtikelId);
 
 router.post("/artikelcreate", postArtikelItem);
 
